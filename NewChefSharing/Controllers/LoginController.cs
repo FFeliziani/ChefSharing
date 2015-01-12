@@ -5,15 +5,20 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Security;
-using System.Guid;
+using NewChefSharing.Models;
 
 namespace NewChefSharing.Controllers
 {
     public class LoginController : ApiController
     {
-        public string Login(string username, string md5)
+        public string Get()
         {
-            return "[INSERT HERE SESSION TOKEN!]";
+            return "assoreta";
+        }
+
+        public string Post(Login l)
+        {
+            return l.username + "|" + l.password;
         }
     }
 }
