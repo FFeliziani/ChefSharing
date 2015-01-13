@@ -8,19 +8,17 @@ using NewChefSharing.Models;
 
 namespace NewChefSharing.Controllers
 {
-    public class DashboardController : ApiController
+    public class VideoController : ApiController
     {
-        public Video[] Get()
+        public Video Get(int id)
         {
             Video video = new Video();
-            video.id = 1;
             video.descrizione = "Ecce Video";
             video.durata = 10000;
+            video.indirizzo = "video.mp4";
             video.nome = "Polentina";
             video.thumbnail = "video.png";
-            video.indirizzo = "video.mp4";
-            Video[] returnArray = { video };
-            return returnArray;
+            return video;
         }
     }
 }
